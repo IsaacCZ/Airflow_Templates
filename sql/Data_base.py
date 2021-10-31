@@ -13,6 +13,7 @@ with DAG(
 ) as dag:
     user_purchase_table = PostgresOperator(
         task_id="create_user_purchase_table",
+        postgres_conn_id="postgres_default",
         sql="""
             CREATE TABLE IF NOT EXISTS user_purchase (
             invoice_number varchar(20),
