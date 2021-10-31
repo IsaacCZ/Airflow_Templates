@@ -12,7 +12,7 @@ with DAG(
     schedule_interval="@once",
     catchup=False,
 ) as dag:
-    create_pet_table = PostgresOperator(
+    user_purchase_table = PostgresOperator(
         task_id="create_user_purchase_table",
         sql="""
             CREATE TABLE IF NOT EXISTS user_purchase (
@@ -24,5 +24,5 @@ with DAG(
             unit_price numeric(8,3),
             customer_id int,
             country varchar(20);
-          """,
+          """
     )
