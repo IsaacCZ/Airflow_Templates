@@ -24,4 +24,5 @@ with DAG(
             customer_id int,
             country varchar(20);
           """,
-    )
+        )
+       )
