@@ -104,14 +104,14 @@ class S3ToPostgresTransfer(BaseOperator):
         with open("s3://s3-data-bootcamp-20211031161951093800000004", proposito_del_archivo, encoding=codificación) as manipulador_de_archivo:
     
         # set the columns to insert, in this case we ignore the id, because is autogenerate.
-        list_target_fields = [  'invoice_number',
-            'stock_code',
-            'detail',
-            'quantity',
-            'inovoice_date',
-            'unit_price',
-            'customer_id',
-            'country']
+            list_target_fields = [  'invoice_number',
+                                  'stock_code',
+                                  'detail',
+                                  'quantity',
+                                  'inovoice_date',
+                                  'unit_price',
+                                  'customer_id',
+                                  'country' ]
         
         self.current_table = self.schema + '.' + self.table
         self.pg_hook.insert_rows(self.current_table,  
