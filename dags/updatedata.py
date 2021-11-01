@@ -70,7 +70,7 @@ class S3ToPostgresTransfer(BaseOperator):
         # Read and decode the file into a list of strings.  
         list_srt_content = s3_key_object.get()['Body'].read().decode(encoding = "utf-8", errors = "ignore")
         
-        shema ={           'invoice_number' :'string',
+        schema ={           'invoice_number' :'string',
                                   'stock_code':'string',
                                   'detail':'string',
                                   'quantity':'int',
