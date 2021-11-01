@@ -9,13 +9,6 @@ import io
 
 
 class S3ToPostgresTransfer(BaseOperator):
-    """S3ToPostgresTransfer: custom operator created to move small csv files of data 
-                             to a postgresDB, it was created for DEMO.
-       Author: Juan Escobar.      
-       Creation Date: 20/09/2022.                   
-    Attributes:
-    """
-
     template_fields = ()
 
     template_ext = ()
@@ -132,7 +125,7 @@ process_dag = S3ToPostgresTransfer(
     task_id = 'dag_s3_to_postgres',
     schema = 'bootcampdb',
     table= 'user_purchase',
-    s3_bucket = 's3-data-bootcamp-20211031161951093800000004,
+    s3_bucket = 's3-data-bootcamp-20211031161951093800000004',
     s3_key =  'user_purchase.csv',
     aws_conn_postgres_id = 'postgres_default',
     aws_conn_id = 'aws_default',   
