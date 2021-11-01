@@ -83,9 +83,9 @@ class S3ToPostgresTransfer(BaseOperator):
 
         # read a csv file with the properties required.
         df_products = pd.read_csv(io.StringIO(list_srt_content), 
-                         header=0, 
-                         delimiter=",",
-                         quotechar='"',
+                         #header=0, 
+                         #delimiter=",",
+                         #quotechar='"',
                          low_memory=False,
                          #parse_dates=date_cols,                                             
                          dtype=schema                         
