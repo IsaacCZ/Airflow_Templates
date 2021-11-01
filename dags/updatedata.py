@@ -66,7 +66,7 @@ class S3ToPostgresTransfer(BaseOperator):
                 #raise AirflowException(
                     #"The key {0} does not exists".format(self.s3_key))
                   
-            #s3_key_object = self.s3.get_key(self.s3_key, self.s3_bucket)
+        s3_key_object = self.s3.get_key(self.s3_key, self.s3_bucket)
 
         # Read and decode the file into a list of strings.  
         list_srt_content = s3_key_object.get()['body'].read().decode(encoding = "utf-8", errors = "ignore")
