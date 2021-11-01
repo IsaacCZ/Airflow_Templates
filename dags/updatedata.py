@@ -70,6 +70,15 @@ class S3ToPostgresTransfer(BaseOperator):
         # Read and decode the file into a list of strings.  
         list_srt_content = s3_key_object.get()['Body'].read().decode(encoding = "utf-8", errors = "ignore")
         
+        shema ={           'invoice_number' :'string',
+                                  'stock_code':'string',
+                                  'detail':'string',
+                                  'quantity':'int',
+                                  'inovoice_date':'date',
+                                  'unit_price':'float',
+                                  'customer_id': 'int',
+                                  'country': 'string' }
+        
 
 
         # read a csv file with the properties required.
@@ -79,7 +88,7 @@ class S3ToPostgresTransfer(BaseOperator):
                          quotechar='"',
                          low_memory=False,
                          #parse_dates=date_cols,                                             
-                         #dtype=schema                         
+                         dtype=schema                         
                          )
         self.log.info(df_products)
         self.log.info(df_products.info())
