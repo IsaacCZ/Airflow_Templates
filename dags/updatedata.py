@@ -74,7 +74,7 @@ class S3ToPostgresTransfer(BaseOperator):
                                   'stock_code':'string',
                                   'detail':'string',
                                   'quantity':'int',
-                                  'inovoice_date':'date',
+                                  'inovoice_date':'date.time',
                                   'unit_price':'float',
                                   'customer_id': 'int',
                                   'country': 'string' }
