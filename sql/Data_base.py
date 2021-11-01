@@ -19,10 +19,10 @@ with DAG(
             invoice_number varchar(20),
             stock_code varchar(20),
             detail varchar(1000),
-            quantity int,
+            quantity bigint,
             inovoice_date timestamp,
             unit_price numeric(8,3),
-            customer_id int,
+            customer_id bigint,
             country varchar(20));
           """,
         
