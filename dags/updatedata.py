@@ -6,7 +6,7 @@ from airflow.exceptions import AirflowException
 import os.path
 import pandas as pd
 import io
-
+import airflow.utils.dates
 
 class S3ToPostgresTransfer(BaseOperator):
     template_fields = ()
