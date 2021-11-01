@@ -68,7 +68,7 @@ class S3ToPostgresTransfer(BaseOperator):
             s3_key_object = self.s3.get_key(self.s3_key, self.s3_bucket)
 
         # Read and decode the file into a list of strings.  
-        list_srt_content = s3_key_object #.decode(encoding = "utf-8", errors = "ignore")
+        list_srt_content = s3_key_object.get()['Body'].read().decode(encoding = "utf-8", errors = "ignore")
         
 
 
