@@ -25,7 +25,7 @@ class S3ToPostgresTransfer(BaseOperator):
             s3_bucket,
             s3_key,
             aws_conn_postgres_id ='postgres_default',
-            aws_conn_id='AWSS3',
+            aws_conn_id='aws_default',
             verify=None,
             wildcard_match=False,
             copy_options=tuple(),
@@ -130,7 +130,7 @@ process_dag = S3ToPostgresTransfer(
     s3_bucket = 's3-data-bootcamp-20211031161951093800000004',
     s3_key =  'user_purchase.csv',
     aws_conn_postgres_id = 'postgres_default',
-    aws_conn_id = ' AWSS3',   
+    aws_conn_id = 'aws_default',   
     dag = dag
 )
 
