@@ -7,6 +7,7 @@ import os.path
 import pandas as pd
 import io
 import airflow.utils.dates
+from airflow.decorators import dag, task
 
 class S3ToPostgresTransfer(BaseOperator):
     template_fields = ()
