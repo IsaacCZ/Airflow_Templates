@@ -26,7 +26,7 @@ t1 = BashOperator(
 
 sensor = S3KeySensor(
     task_id="check_s3",
-    bucket_key="",
+    bucket_key="user",
     wildcard_match=True,
     bucket_name='test-delet-me',
     aws_conn_id="my_conn_S3",
