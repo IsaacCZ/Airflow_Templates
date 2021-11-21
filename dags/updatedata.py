@@ -105,7 +105,7 @@ class S3ToPostgresTransfer(BaseOperator):
                                #Microsoft, en Linux es UTF-8
                 # set the columns to insert, in this case we ignore the id, because is autogenerate.
 
-        with open("s3://s3-data-bootcamp-20211120192557093300000004", proposito_del_archivo, encoding=codificación) as manipulador_de_archivo:
+            #with open("s3://s3-data-bootcamp-20211120192557093300000004", proposito_del_archivo, encoding=codificación) as manipulador_de_archivo:
             list_target_fields = [  'invoice_number',
                                   'stock_code',
                                   'detail',
