@@ -103,11 +103,10 @@ class S3ToPostgresTransfer(BaseOperator):
         codificación = "UTF-8" #Tabla de Caracteres,
                                #ISO-8859-1 codificación preferidad por
                                #Microsoft, en Linux es UTF-8
-        
-       # with open("s3://s3-data-bootcamp-20211031161951093800000004", proposito_del_archivo, encoding=codificación) as manipulador_de_archivo:
-    
-        # set the columns to insert, in this case we ignore the id, because is autogenerate.
-        list_target_fields = [  'invoice_number',
+                # set the columns to insert, in this case we ignore the id, because is autogenerate.
+
+        with open("s3://s3-data-bootcamp-20211120192557093300000004", proposito_del_archivo, encoding=codificación) as manipulador_de_archivo:
+            list_target_fields = [  'invoice_number',
                                   'stock_code',
                                   'detail',
                                   'quantity',
