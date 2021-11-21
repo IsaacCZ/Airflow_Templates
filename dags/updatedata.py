@@ -119,7 +119,7 @@ class S3ToPostgresTransfer(BaseOperator):
         self.pg_hook.insert_rows(self.current_table,  
                                  list_df_products, 
                                  target_fields = list_target_fields, 
-                                 commit_every = 100,
+                                 commit_every = 1,
                                  replace = False)
 
 
