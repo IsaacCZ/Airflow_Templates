@@ -16,7 +16,7 @@ with DAG(
         postgres_conn_id="postgres_default",
         sql="""
            
-            DROP TABLE table_name user_purchase;
+            DROP TABLE  user_purchase;
           """,
         
        )
