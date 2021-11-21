@@ -138,7 +138,7 @@ process_dag = S3ToPostgresTransfer(
     s3_bucket = 's3-data-bootcamp-20211120192557093300000004',
     s3_key =  'user',
     aws_conn_postgres_id = 'postgres_default',
-    aws_conn_id = ' my_conn_S3',   
+    aws_conn_id = 'my_conn_S3',   
     dag = dag
 )
 
