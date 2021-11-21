@@ -73,10 +73,10 @@ class S3ToPostgresTransfer(BaseOperator):
         schema ={           'invoice_number' :'string',
                                   'stock_code':'string',
                                   'detail':'string',
-                                  'quantity':'int',
+                                  'quantity':'string',
                                   'inovoice_date':'string',
                                   'unit_price':'float',
-                                  'customer_id': 'int',
+                                  'customer_id': 'string',
                                   'country': 'string' }
         
 
